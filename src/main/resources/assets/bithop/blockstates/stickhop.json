@@ -1,0 +1,29 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "bithop:stickhop_down"
+  },
+  "variants": {
+    "normal": {
+      "model": "bithop:stickhop_down"
+    },
+    "inventory": {
+      "model": "bithop:stickhop_item"
+    },
+    "facing=down": {
+      "model": "bithop:stickhop_down"
+    },
+    "facing=north": {
+      "model": "bithop:stickhop_side"
+    },
+    "facing=south": {
+      "model": "bithop:stickhop_side", "y": 180
+    },
+    "facing=west": {
+      "model": "bithop:stickhop_side", "y": 270
+    },
+    "facing=east": {
+      "model": "bithop:stickhop_side", "y": 90
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "bithop:fluxhop_down"
+  },
+  "variants": {
+    "normal": {
+      "model": "bithop:fluxhop_down"
+    },
+    "inventory": {
+      "model": "bithop:fluxhop_item"
+    },
+    "facing=down": {
+      "model": "bithop:fluxhop_down"
+    },
+    "facing=north": {
+      "model": "bithop:fluxhop_side"
+    },
+    "facing=south": {
+      "model": "bithop:fluxhop_side", "y": 180
+    },
+    "facing=west": {
+      "model": "bithop:fluxhop_side", "y": 270
+    },
+    "facing=east": {
+      "model": "bithop:fluxhop_side", "y": 90
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "bithop:bithop_down"
+  },
+  "variants": {
+    "normal": {
+      "model": "bithop:bithop_down"
+    },
+    "inventory": {
+      "model": "bithop:bithop_item"
+    },
+    "facing=down": {
+      "model": "bithop:bithop_down"
+    },
+    "facing=north": {
+      "model": "bithop:bithop_side"
+    },
+    "facing=south": {
+      "model": "bithop:bithop_side", "y": 180
+    },
+    "facing=west": {
+      "model": "bithop:bithop_side", "y": 270
+    },
+    "facing=east": {
+      "model": "bithop:bithop_side", "y": 90
+    }
+  }
+}

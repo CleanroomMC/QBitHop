@@ -1,0 +1,26 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "bithop:screwhop"
+  },
+  "variants": {
+    "normal": {
+      "model": "bithop:screwhop"
+    },
+    "inventory": {
+      "model": "bithop:screwhop_item"
+    },
+    "facing=north": {
+      "model": "bithop:screwhop", "y": 180
+    },
+    "facing=south": {
+      "model": "bithop:screwhop"
+    },
+    "facing=west": {
+      "model": "bithop:screwhop", "y": 90
+    },
+    "facing=east": {
+      "model": "bithop:screwhop", "y": 270
+    }
+  }
+}
