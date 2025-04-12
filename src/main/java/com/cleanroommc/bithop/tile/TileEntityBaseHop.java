@@ -93,6 +93,7 @@ public abstract class TileEntityBaseHop extends TileEntity implements IGuiHolder
 
     @Override
     public ModularPanel buildUI(PosGuiData data, PanelSyncManager syncManager, UISettings settings) {
+        syncManager.registerSlotGroup("hopper", getSlotAmount());
         return new ModularPanel(getClass().getSimpleName()).width(176)
                 .coverChildrenHeight()
                 .padding(7)
@@ -106,7 +107,9 @@ public abstract class TileEntityBaseHop extends TileEntity implements IGuiHolder
                                               .child(IKey.lang(getTranslationKey()).asWidget().leftRel(0f))
                                               .child(SlotGroupWidget.builder()
                                                              .row("IIIII")
-                                                             .key('I', i -> new ItemSlot().slot(new ModularSlot(getInventory(), i)))
+                                                             .key('I', i -> new ItemSlot()
+                                                                     .slot(new ModularSlot(getInventory(), i)
+                                                                                   .slotGroup("hopper")))
                                                              .build()
                                                              .marginTop(4)
                                                              .marginBottom(7)
