@@ -13,7 +13,7 @@ public class TileEntityStickHop extends TileEntityBaseHop {
         handlePull();
     }
 
-    private int getFirstTransferrableSlotSticky(IItemHandler to) {
+    /*private int getFirstTransferrableSlotSticky(IItemHandler to) {
         for (int slot = 0; slot < to.getSlots(); slot++) {
             ItemStack stack = to.getStackInSlot(slot);
             if (!stack.isEmpty() && stack.getCount() > 1 && ItemHandling.canInsertExtract(getInventory(), to, slot)) {
@@ -21,11 +21,11 @@ public class TileEntityStickHop extends TileEntityBaseHop {
             }
         }
         return -1;
-    }
+    }*/
 
     @Override
     protected void handlePush() {
-        IItemHandler itemHandler = getNeighborInventory(getFacing());
+        /*IItemHandler itemHandler = getNeighborInventory(getFacing());
         if (itemHandler == null) return;
         int slotFull = getFirstTransferrableSlotSticky(itemHandler);
         if (slotFull == -1) return;
@@ -36,7 +36,7 @@ public class TileEntityStickHop extends TileEntityBaseHop {
                 ItemStack insert = itemHandler.insertItem(insertSlot, itemExtract, false);
                 if (insert.isEmpty()) getInventory().extractItem(slotFull, 1, false);
             }
-        }
+        }*/
     }
 
     @Override
