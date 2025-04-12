@@ -4,7 +4,7 @@
     "description": "An example mod for Minecraft 1.12.2 with Forge",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "logoFile": "",
+    "logoFile": "bithop_logo.png",
     "url": "",
     "authorList": [],
     "credits": "",
