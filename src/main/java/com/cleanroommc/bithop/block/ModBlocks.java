@@ -14,7 +14,11 @@ public class ModBlocks {
     public static final BlockStickHop STICKHOP = new BlockStickHop("stickhop");
 
     public static BlockTileEntity<?>[] allBlocks = {
-            BITHOP, FLUXHOP, SCREWHOP, PULLHOP, STICKHOP
+            BITHOP,
+            FLUXHOP,
+            SCREWHOP,
+            PULLHOP,
+            /*STICKHOP*/
     };
 
     public static void register(IForgeRegistry<Block> registry) {
