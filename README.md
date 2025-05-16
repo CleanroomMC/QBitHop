@@ -2,8 +2,14 @@
 
 a fork of [BitHop](https://www.curseforge.com/minecraft/mc-mods/bithop).
 
-Which claims to have low lag hoppers, which is only true to a certain extent. This fork aims to improve the performance
-even further. Additionally this fork does not use kotlin (effectively removing the forgelin dependency).
+Improvements over BitHop:
+- improve performance slightly further
+- better collision boxes (similar to Diet Hopper mod)
+- removes Forgelin dependency (converted all kotlin code to java)
+- rewrites all UI with ModularUI (yes this adds a dependency for ModularUI) which fixes all the issues it had
+
+The main problem with the mod is the UI issues. It was barely noticable to the user, but on every item slot click, every
+slot was duplicated. Which created voiding issues for InventoryBogoSorter.
 
 As BitHop's [license](https://github.com/elytra/BitHop/blob/master/COPYING.gpl) requires, this fork is also licensed
 under the GNU General Public License.
