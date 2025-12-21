@@ -3,7 +3,9 @@ package com.cleanroommc.bithop.tile;
 import com.cleanroommc.bithop.BitHopConfig;
 import com.cleanroommc.bithop.block.ModBlocks;
 import com.cleanroommc.bithop.util.ObservableEnergyStorage;
+import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagInt;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.capabilities.Capability;
@@ -14,14 +16,15 @@ import org.jetbrains.annotations.Nullable;
 
 public class TileEntityFluxHop extends TileEntityBaseHop {
 
-    private final ObservableEnergyStorage energyStorage = new ObservableEnergyStorage(10000, getEnergyTransferRate());
+    private final ObservableEnergyStorage energyStorage;
 
     public TileEntityFluxHop() {
+        this.energyStorage = new ObservableEnergyStorage(10000, getEnergyTransferRate());
         this.energyStorage.listen(this::markDirty);
     }
 
     public int getEnergyTransferRate() {
-        return 8 * BitHopConfig.fluxHop.fluxHopTransfer;
+        return getMaxCooldown() * BitHopConfig.fluxHop.fluxHopTransfer;
     }
 
     @Override
@@ -62,7 +65,9 @@ public class TileEntityFluxHop extends TileEntityBaseHop {
     @Override
     public void readFromNBT(@NotNull NBTTagCompound compound) {
         super.readFromNBT(compound);
-        CapabilityEnergy.ENERGY.getStorage().readNBT(CapabilityEnergy.ENERGY, this.energyStorage, null, compound.getTag("Energy"));
+        NBTBase energy = compound.getTag("Energy");
+        if (energy == null) energy = new NBTTagInt(0);
+        CapabilityEnergy.ENERGY.getStorage().readNBT(CapabilityEnergy.ENERGY, this.energyStorage, null, energy);
     }
 
     @Override
