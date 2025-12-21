@@ -38,5 +38,5 @@
  * For more details, see https://docs.gradle.org/8.4/userguide/java_library_plugin.html#sec:java_library_configurations_graph
  */
 dependencies {
-    api("com.cleanroommc:modularui:2.5.0-rc5") { transitive false }
+    api("com.cleanroommc:modularui:3.0.6") { transitive false }
 }

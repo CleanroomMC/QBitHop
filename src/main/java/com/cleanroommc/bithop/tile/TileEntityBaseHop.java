@@ -97,7 +97,6 @@ public abstract class TileEntityBaseHop extends TileEntity implements IGuiHolder
         return new ModularPanel(getClass().getSimpleName()).width(176)
                 .coverChildrenHeight()
                 .padding(7)
-                .debugName("panel")
                 .child(Flow.column()
                                .coverChildren()
                                .debugName("1")
