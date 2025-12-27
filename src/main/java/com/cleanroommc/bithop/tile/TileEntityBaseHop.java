@@ -99,10 +99,10 @@ public abstract class TileEntityBaseHop extends TileEntity implements IGuiHolder
                 .padding(7)
                 .child(Flow.column()
                                .coverChildren()
-                               .debugName("1")
+                               .name("1")
                                .child(Flow.column()
                                               .coverChildrenHeight()
-                                              .debugName("2")
+                                              .name("2")
                                               .child(IKey.lang(getTranslationKey()).asWidget().leftRel(0f))
                                               .child(SlotGroupWidget.builder()
                                                              .row("IIIII")
@@ -113,7 +113,7 @@ public abstract class TileEntityBaseHop extends TileEntity implements IGuiHolder
                                                              .marginTop(4)
                                                              .marginBottom(7)
                                                              .alignX(0.5f)
-                                                             .debugName("hopper_slots")))
+                                                             .name("hopper_slots")))
                                .child(SlotGroupWidget.playerInventory(false)));
     }
 
